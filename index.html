@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco Quiz Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ================= START SCREEN ================= -->
+  <div class="start-screen" id="startScreen">
+    <h1>🌱 Eko Savol-Javob O'yini</h1>
+    <p>Ismingizni kiriting va ekologiya bilimlaringizni sinang!</p>
+
+    <input type="text" id="playerName" placeholder="Masalan: Alisher">
+    <button id="startBtn">▶ O'yinni Boshlash</button>
+
+    <!-- SOUND CONTROLS -->
+    <div class="sound-controls">
+      <button id="soundToggle">🔊</button>
+      <input type="range" id="volumeSlider" min="0" max="100" value="15">
+    </div>
+
+    <h2>🏆 Eng Yaxshi Natijalar</h2>
+    <table id="leaderboard">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>O'yinchi</th>
+          <th>Harakat</th>
+          <th>Vaqt</th>
+          <th>Medal</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboardBody"></tbody>
+    </table>
+  </div>
+
+  <!-- ================= GAME SCREEN ================= -->
+  <div class="game-screen" id="gameScreen" style="display:none;">
+    <div class="top-bar">
+      <span id="stageDisplay">1-bosqich</span>
+      <span id="livesDisplay">❤️❤️❤️</span>
+      <span id="timerDisplay">20s</span>
+    </div>
+
+    <div class="question-box">
+      <h2 id="questionText"></h2>
+      <div class="answers" id="answersContainer"></div>
+    </div>
+  </div>
+
+  <!-- ================= WIN SCREEN ================= -->
+  <div class="win-screen" id="winScreen" style="display:none;">
+    <h2>🎉 Tabriklaymiz!</h2>
+    <p>Siz o'yinni yakunladingiz!</p>
+    <button id="restartBtn">🔁 Yana O'ynash</button>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>🌍 EkoLifeGroup</p>
+  </footer>
+
+  <!-- GAME SCRIPT -->
+  <script src="js/game.js"></script>
+</body>
+</html>
